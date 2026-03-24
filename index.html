@@ -3,133 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Patras Music Events & Photobooth Events</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
+<title>Patras Music Photobooth Events</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <style>
-body {
-margin:0;
-font-family:'Poppins',sans-serif;
-background:#000;
-color:white;
-}
-
-header {
-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819');
-background-size:cover;
-background-position:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-h1 {
-color:gold;
-font-size:50px;
-margin:0;
-}
-
-.subtitle {
-color:#ccc;
-margin-top:10px;
-}
-
-.btn {
-margin-top:20px;
-padding:12px 25px;
-background:gold;
-color:black;
-border-radius:5px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.section {
-padding:60px 20px;
-text-align:center;
-}
-
-.services {
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-}
-
-.card {
-background:#111;
-padding:20px;
-border-radius:10px;
-width:260px;
-border:1px solid gold;
-transition:0.3s;
-}
-
-.card:hover {
-transform:translateY(-10px);
-box-shadow:0 0 20px gold;
-}
-
-.card h3 {
-color:gold;
-}
-
-.contact {
-background:#111;
-padding:40px;
-}
-
-a {
-color:gold;
-}
-
-footer {
-padding:20px;
-color:#aaa;
-text-align:center;
-}
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat', sans-serif;}
+body {background:#fff; color:#333;}
+header {background:url('https://images.unsplash.com/photo-1605704230680-f5f85c9b6a9e?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat; height:100vh; display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center; color:#fff;}
+header h1 {font-size:3rem; margin-bottom:10px;}
+header p {font-size:1.2rem; margin-bottom:20px;}
+.btn {padding:15px 30px; background:#FF3366; color:#fff; text-decoration:none; font-weight:700; border-radius:5px;}
+section {padding:80px 20px; text-align:center;}
+.services {display:flex; flex-wrap:wrap; justify-content:center; gap:40px;}
+.service {flex:1 1 250px; background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1);}
+.service h3 {margin-bottom:15px; color:#FF3366;}
+.gallery {display:flex; flex-wrap:wrap; justify-content:center; gap:15px;}
+.gallery img {width:250px; height:200px; object-fit:cover; border-radius:10px;}
+footer {background:#333; color:#fff; padding:30px 20px; text-align:center;}
+footer a {color:#FF3366; text-decoration:none; margin:0 10px;}
+@media(max-width:768px){header h1{font-size:2.2rem;} .service, .gallery img{width:100%;}}
 </style>
-
 </head>
-
 <body>
 
 <header>
-<h1>Patras Music & Photobooth Events</h1>
-<p class="subtitle">Wedding • Events • Parties</p>
-<a href="#contact" class="btn">Κλείσε Τώρα</a>
+<h1>Patras Music Photobooth Events</h1>
+<p>Φέρνουμε τη μαγεία στο γάμο σας με Photobooth, DJ & Fireworks!</p>
+<a href="https://wa.me/306932618810" class="btn">Κλείσε Τώρα</a>
 </header>
 
-<section class="section">
-<h2>Υπηρεσίες</h2>
+<section>
+<h2>Οι Υπηρεσίες μας</h2>
 <div class="services">
-
-<div class="card"><h3>Photobooth</h3><p>Μοναδικές φωτογραφίες</p></div>
-<div class="card"><h3>360° Video</h3><p>Εντυπωσιακά videos</p></div>
-<div class="card"><h3>DJ</h3><p>Αξέχαστη μουσική</p></div>
-<div class="card"><h3>Φωτισμός</h3><p>Ατμόσφαιρα event</p></div>
-<div class="card"><h3>Ήχος</h3><p>Επαγγελματικός εξοπλισμός</p></div>
-<div class="card"><h3>Συντριβάνια</h3><p>Είσοδος WOW</p></div>
-
+<div class="service">
+<h3>Photobooth</h3>
+<p>Απόλυτη διασκέδαση για τους καλεσμένους σας με instant φωτογραφίες και props!</p>
+</div>
+<div class="service">
+<h3>DJ για Γάμους</h3>
+<p>Εμπειρία στη μουσική και στο να κρατάμε τον κόσμο να χορεύει μέχρι το πρωί!</p>
+</div>
+<div class="service">
+<h3>Fireworks</h3>
+<p>Μαγευτικά πυροτεχνήματα για αξέχαστες στιγμές κατά την είσοδο ή την τούρτα.</p>
+</div>
 </div>
 </section>
 
-<section class="section contact" id="contact">
+<section>
+<h2>Gallery</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1524492449090-5b71a89a6e0e?auto=format&fit=crop&w=800&q=80" alt="Event 1">
+<img src="https://images.unsplash.com/photo-1535909339361-1f4dca88f66e?auto=format&fit=crop&w=800&q=80" alt="Event 2">
+<img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=800&q=80" alt="Event 3">
+</div>
+</section>
+
+<section>
+<h2>Σχετικά με εμάς</h2>
+<p>Η Patras Music Photobooth Events με τον Spyros Athanasopoulos αναλαμβάνει κάθε γάμο και event με επαγγελματισμό και μεράκι, για να γλεντάει ο κόσμος μέχρι τις πρώτες πρωινές ώρες!</p>
+</section>
+
+<section>
 <h2>Επικοινωνία</h2>
-<p>📞 <a href="tel:6932618810">6932618810</a></p>
-<p>📍 Πάτρα</p>
-<p>
-Instagram:<br>
-<a href="https://instagram.com/patras_music_events">@patras_music_events</a>
-</p>
+<p>Τηλ: <a href="tel:+306932618810">6932618810</a></p>
+<p>Email: <a href="mailto:info@patrasmusic.com">info@patrasmusic.com</a></p>
+<a href="https://wa.me/306932618810" class="btn">Στείλε WhatsApp</a>
 </section>
 
 <footer>
-© Patras Music Events
+<p>© 2026 Patras Music Photobooth Events | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
 </footer>
 
 </body>
