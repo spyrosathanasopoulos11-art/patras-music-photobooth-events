@@ -8,7 +8,7 @@
 <style>
 body {
   margin:0;
-  font-family: Arial, sans-serif;
+  font-family:Arial, sans-serif;
   background:#0a0a0a;
   color:white;
 }
@@ -16,15 +16,14 @@ body {
 header {
   display:flex;
   justify-content:space-between;
-  align-items:center;
   padding:15px 20px;
   background:black;
 }
 
 .logo {
-  font-size:22px;
-  font-weight:bold;
   color:#d8b15a;
+  font-weight:bold;
+  font-size:22px;
 }
 
 nav a {
@@ -33,14 +32,14 @@ nav a {
   text-decoration:none;
 }
 
+/* HERO */
 .hero {
   text-align:center;
-  padding:60px 20px;
-  background:url("images/IMG_2058.jpeg") center/cover no-repeat;
+  padding:80px 20px;
 }
 
 .hero img {
-  width:250px;
+  width:300px;
   margin-bottom:20px;
 }
 
@@ -49,8 +48,7 @@ nav a {
 }
 
 .hero p {
-  font-size:18px;
-  margin-top:10px;
+  color:#ccc;
 }
 
 .btn {
@@ -60,8 +58,20 @@ nav a {
   background:#d8b15a;
   color:black;
   border-radius:25px;
-  text-decoration:none;
   font-weight:bold;
+}
+
+/* GALLERY */
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+  gap:10px;
+  padding:20px;
+}
+
+.gallery img {
+  width:100%;
+  border-radius:10px;
 }
 </style>
 </head>
@@ -79,14 +89,33 @@ nav a {
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
+
+  <!-- 🔥 ΤΟ LOGO ΣΤΗ ΜΕΣΗ -->
   <img src="images/logo.jpg" alt="logo">
 
   <h1>Μοναδικοί γάμοι με εντυπωσιακή είσοδο & δυνατή διασκέδαση</h1>
 
   <p>DJ γάμου, είσοδος ζευγαριού με fireworks, photobooth και premium ατμόσφαιρα</p>
 
-  <a href="#" class="btn">Κλείσε ημερομηνία</a>
+  <a class="btn">Κλείσε ημερομηνία</a>
+
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+
+  <img src="images/wedding1.jpg">
+  <img src="images/wedding2.jpg">
+  <img src="images/wedding3.jpg">
+  <img src="images/wedding4.jpg">
+  <img src="images/event1.jpg">
+  <img src="images/event2.jpg">
+  <img src="images/wedding10.jpg">
+  <img src="images/wedding11.jpg">
+  <img src="images/wedding12.jpg">
+
 </section>
 
 </body>
