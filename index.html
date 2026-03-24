@@ -68,12 +68,14 @@
     }
 
     .menu{
-      display:flex;
-      gap:22px;
-      flex-wrap:wrap;
-      font-size:15px;
-      color:#fff;
-    }
+      .menu {
+  display:flex;
+  gap:20px;
+  margin-top:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+  font-size:16px;
+}
 
     .menu a:hover{color:var(--gold)}
 
@@ -345,14 +347,19 @@
         opacity:.12;
       }
     }
-  </style>
+  </style>.logo-text {
+  font-size: 26px;
+  font-weight: 800;
+  color: #d8b15a;
+  letter-spacing: 1px;
+}
 </head>
 <body>
 
   <header class="topbar">
     <div class="nav">
       <a class="brand" href="#home">
-  <span>Patras Music Events</span>
+  <span class="logo-text">Patras Music Events</span>
 </a>                            
       <nav class="menu">
         <a href="#home">Αρχική</a>
@@ -360,7 +367,15 @@
         <a href="#gallery">Gallery</a>
         <a href="#about">Σχετικά</a>
         <a href="#contact">Επικοινωνία</a>
-      </nav>
+      </nav>.nav {
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 20px;
+  flex-direction: column;
+}
     </div>
   </header>
 
