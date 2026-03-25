@@ -3,11 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Patras Photobooth & Music Events</title>
+
+<title>Patras Photobooth & Music Events | DJ, Photobooth, Wedding Effects Πάτρα</title>
+<meta name="description" content="Patras Photobooth & Music Events στην Πάτρα. DJ γάμου, photobooth, φωτισμός, wedding effects, εφέ εισόδου, πρώτος χορός και μοναδικές εκδηλώσεις.">
+<meta name="keywords" content="DJ Πάτρα, photobooth Πάτρα, wedding photobooth, DJ γάμου Πάτρα, wedding effects Πάτρα, μουσική γάμου, εκδηλώσεις Πάτρα">
+<meta name="author" content="Patras Photobooth & Music Events">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Patras Photobooth & Music Events">
+<meta property="og:description" content="DJ, photobooth, φωτισμός και wedding effects για γάμους και εκδηλώσεις στην Πάτρα.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="hero.jpg">
+<meta name="theme-color" content="#d4af37">
 
 <style>
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -22,7 +36,10 @@ a {
     text-decoration: none;
 }
 
-/* HERO */
+img {
+    max-width: 100%;
+}
+
 header {
     position: relative;
     min-height: 100vh;
@@ -85,6 +102,7 @@ header::after {
     border-radius: 14px;
     font-size: 18px;
     font-weight: bold;
+    display: inline-block;
 }
 
 .btn-call {
@@ -98,7 +116,16 @@ header::after {
     background: rgba(255,255,255,0.05);
 }
 
-/* GENERAL SECTIONS */
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.btn-offer {
+    background: white;
+    color: black;
+}
+
 section {
     padding: 60px 20px;
 }
@@ -122,12 +149,27 @@ section {
     font-size: 18px;
 }
 
-/* ABOUT */
 .about {
     background: #111;
 }
 
-/* SERVICES */
+.about-pills {
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pill {
+    background: #1b1b1b;
+    border: 1px solid #2a2a2a;
+    padding: 10px 16px;
+    border-radius: 999px;
+    color: #f2f2f2;
+    font-weight: bold;
+}
+
 .services-section {
     background: #0c0c0c;
 }
@@ -158,7 +200,36 @@ section {
     color: #d8d8d8;
 }
 
-/* GALLERY */
+.reviews-section {
+    background: #101010;
+}
+
+.reviews {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.review-card {
+    background: #171717;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.stars {
+    color: #d4af37;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.review-name {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
 .gallery-section {
     background: #141414;
 }
@@ -178,7 +249,19 @@ section {
     display: block;
 }
 
-/* CONTACT CTA */
+.maps-section {
+    background: #0d0d0d;
+    text-align: center;
+}
+
+.maps-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .contact-section {
     background:
       linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
@@ -211,12 +294,28 @@ section {
     max-width: 320px;
 }
 
-/* FOOTER */
 footer {
     background: #000;
     text-align: center;
     padding: 22px 20px;
     color: #cfcfcf;
+}
+
+.floating-whatsapp {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 999;
+    background: #25D366;
+    color: white;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 
 @media (min-width: 769px) {
@@ -229,17 +328,18 @@ footer {
     }
 
     .hero-buttons {
-        width: 320px;
+        width: 360px;
     }
 
     .contact-buttons {
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .contact-buttons .btn {
         width: auto;
-        min-width: 260px;
+        min-width: 250px;
     }
 }
 </style>
@@ -259,7 +359,7 @@ footer {
     </div>
 </header>
 
-<section class="about">
+<section class="about" id="about">
     <div class="container">
         <h2 class="section-title">Σχετικά με εμάς</h2>
         <p class="section-text">
@@ -268,10 +368,17 @@ footer {
             Δημιουργούμε ξεχωριστή ατμόσφαιρα, εντυπωσιακές εικόνες και μοναδικές στιγμές
             που μένουν αξέχαστες.
         </p>
+
+        <div class="about-pills">
+            <div class="pill">DJ Πάτρα</div>
+            <div class="pill">Photobooth</div>
+            <div class="pill">Wedding Effects</div>
+            <div class="pill">Γάμοι & Events</div>
+        </div>
     </div>
 </section>
 
-<section class="services-section">
+<section class="services-section" id="services">
     <div class="container">
         <h2 class="section-title">Υπηρεσίες</h2>
         <p class="section-text">
@@ -302,7 +409,36 @@ footer {
     </div>
 </section>
 
-<section class="gallery-section">
+<section class="reviews-section" id="reviews">
+    <div class="container">
+        <h2 class="section-title">Κριτικές</h2>
+        <p class="section-text">
+            Ενδεικτικά σχόλια πελατών για τη δουλειά μας.
+        </p>
+
+        <div class="reviews">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>Άψογη συνεργασία, φοβερή μουσική και εξαιρετική ατμόσφαιρα. Ο κόσμος δεν σταμάτησε να χορεύει.</p>
+                <div class="review-name">— Πελάτης Γάμου</div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>Το photobooth ήταν απίστευτο και όλοι οι καλεσμένοι το χάρηκαν. Πολύ επαγγελματική παρουσία.</p>
+                <div class="review-name">— Wedding Event</div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>Τα wedding effects έκαναν τη διαφορά στον πρώτο χορό και στην είσοδο. Υπέροχο αποτέλεσμα.</p>
+                <div class="review-name">— Event Client</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-section" id="gallery">
     <div class="container">
         <h2 class="section-title">Gallery</h2>
         <p class="section-text">
@@ -324,9 +460,24 @@ footer {
     </div>
 </section>
 
-<section class="contact-section">
+<section class="maps-section" id="location">
     <div class="container">
-        <h2>Κλείσε τώρα την εκδήλωσή σου</h2>
+        <h2 class="section-title">Τοποθεσία & Επικοινωνία</h2>
+        <p class="section-text">
+            Εξυπηρετούμε Πάτρα και γύρω περιοχές για γάμους, events και photobooth υπηρεσίες.
+        </p>
+
+        <div class="maps-buttons">
+            <a href="tel:6932618810" class="btn btn-call">📞 Κάλεσέ μας</a>
+            <a href="https://maps.google.com/?q=Patra" target="_blank" rel="noopener noreferrer" class="btn btn-offer">📍 Google Maps</a>
+            <a href="https://instagram.com/wedding_photobooth_events" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">📸 Instagram</a>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section" id="offer">
+    <div class="container">
+        <h2>Ζήτα προσφορά</h2>
         <p>
             Επικοινώνησε μαζί μας για να οργανώσουμε μαζί τη μουσική, το photobooth
             και τα wedding effects της εκδήλωσής σου με επαγγελματικό αποτέλεσμα.
@@ -334,7 +485,9 @@ footer {
 
         <div class="contact-buttons">
             <a href="tel:6932618810" class="btn btn-call">📞 Τηλέφωνο Επικοινωνίας</a>
+            <a href="https://wa.me/306932618810" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">💬 WhatsApp</a>
             <a href="https://instagram.com/wedding_photobooth_events" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">📸 Instagram</a>
+            <a href="mailto:info@patrasphotobooth.gr?subject=Ζήτηση%20Προσφοράς" class="btn btn-offer">✉️ Ζήτα προσφορά</a>
         </div>
     </div>
 </section>
@@ -342,6 +495,8 @@ footer {
 <footer>
     © Patras Photobooth & Music Events
 </footer>
+
+<a href="https://wa.me/306932618810" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="WhatsApp">💬</a>
 
 </body>
 </html>
