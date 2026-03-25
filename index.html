@@ -3,81 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Patras Music Events</title>
+<title>Patras Photobooth & Music Events</title>
 
 <style>
 body {
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#0a0a0a;
-  color:white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
 }
 
+/* HEADER */
 header {
-  display:flex;
-  justify-content:space-between;
-  padding:15px 20px;
-  background:black;
+    background: url('https://images.unsplash.com/photo-1519741497674-611481863552') center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.logo {
-  color:#d8b15a;
-  font-weight:bold;
-  font-size:22px;
+header h1 {
+    font-size: 45px;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
 }
 
-nav a {
-  margin-left:15px;
-  color:white;
-  text-decoration:none;
-}
-
-/* HERO */
-.hero {
-  text-align:center;
-  padding:80px 20px;
-}
-
-.hero img {
-  width:300px;
-  margin-bottom:20px;
-}
-
-.hero h1 {
-  font-size:32px;
-}
-
-.hero p {
-  color:#ccc;
+/* SECTION */
+section {
+    padding: 50px 20px;
+    text-align: center;
 }
 
 .btn {
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 25px;
-  background:#d8b15a;
-  color:black;
-  border-radius:25px;
-  font-weight:bold;
+    display: inline-block;
+    background: gold;
+    color: black;
+    padding: 15px 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* SERVICES */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
 }
 
 /* GALLERY */
 .gallery {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
-  gap:10px;
-  padding:20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .gallery img {
-  transition:0.3s;
+    width: 33.33%;
+    height: 250px;
+    object-fit: cover;
 }
 
-.gallery img {
-  width:100%;
-  height:250px;
-  object-fit:cover;
-  border-radius:12px;
+/* FOOTER */
+footer {
+    background: black;
+    padding: 20px;
+    text-align: center;
 }
 </style>
 </head>
@@ -85,44 +85,41 @@ nav a {
 <body>
 
 <header>
-  <div class="logo">Patras Music Events</div>
-  <nav>
-    <a href="#">Αρχική</a>
-    <a href="#">Υπηρεσίες</a>
-    <a href="#">Gallery</a>
-    <a href="#">Σχετικά</a>
-    <a href="#">Επικοινωνία</a>
-  </nav>
+    <h1>Patras Photobooth & Music Events<br>Τηλ: 6932618810</h1>
 </header>
 
-<!-- HERO -->
-<section class="hero">
+<section>
+    <h2>Σχετικά με εμάς</h2>
+    <p>
+    Αναλαμβάνουμε γάμους και εκδηλώσεις με επαγγελματικό ήχο, φωτισμό και Photobooth.
+    Δημιουργούμε μοναδικές στιγμές και ξεσηκώνουμε τον κόσμο μέχρι το πρωί!
+    </p>
 
-  <!-- 🔥 ΤΟ LOGO ΣΤΗ ΜΕΣΗ -->
-  <img src="images/logo.jpg>
-
-  <h1>Μοναδικοί γάμοι με εντυπωσιακή είσοδο & δυνατή διασκέδαση</h1>
-
-  <p>DJ γάμου, είσοδος ζευγαριού με fireworks, photobooth και premium ατμόσφαιρα</p>
-
-  <a class="btn">Κλείσε ημερομηνία</a>
-
+    <a href="tel:6932618810" class="btn">Κάλεσε τώρα</a>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery">
-
-  <img src="images/wedding1.jpg">
-  <img src="images/wedding2.jpg">
-  <img src="images/wedding3.jpg">
-  <img src="images/wedding4.jpg">
-  <img src="images/event1.jpg">
-  <img src="images/event2.jpg">
-  <img src="images/wedding10.jpg">
-  <img src="images/wedding11.jpg">
-  <img src="images/wedding12.jpg">
-
+<section>
+    <h2>Υπηρεσίες</h2>
+    <div class="services">
+        <div class="card">🎧 DJ & Μουσική Κάλυψη</div>
+        <div class="card">📸 Photobooth</div>
+        <div class="card">💡 Φωτισμός Εκδηλώσεων</div>
+        <div class="card">🎇 Εφέ & Wedding Effects</div>
+    </div>
 </section>
+
+<section>
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486">
+        <img src="https://images.unsplash.com/photo-1505238680356-667803448bb6">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc">
+    </div>
+</section>
+
+<footer>
+    <p>© Patras Photobooth & Music Events</p>
+</footer>
 
 </body>
 </html>
