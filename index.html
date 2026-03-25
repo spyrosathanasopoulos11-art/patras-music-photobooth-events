@@ -6,75 +6,80 @@
 <title>Patras Photobooth & Music Events</title>
 
 <style>
-* { box-sizing: border-box; }
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0f0f0f;
+    background: #000;
     color: white;
 }
 
-/* HEADER */
+/* HERO */
 header {
     position: relative;
-    min-height: 100vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
-    url('hero.jpg') center 42% / cover no-repeat;
-    text-align: center;
-    padding: 40px 20px;
+    height: 100vh;
+    background: url('hero.jpg') center/cover no-repeat;
 }
 
-/* TOP CONTENT */
-.hero-top {
+header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+}
+
+.hero-content {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
     z-index: 2;
-    position: relative;
 }
 
 .hero-logo {
-    width: 160px;
-    margin-bottom: 15px;
-    border-radius: 20px;
-    background: rgba(0,0,0,0.5);
-    padding: 10px;
+    width: 200px;
+    border-radius: 15px;
 }
 
 h1 {
-    font-size: 42px;
-    margin: 10px 0;
+    font-size: 28px;
+    margin: 20px 0;
 }
 
 .phone {
-    color: #d4af37;
-    font-size: 26px;
-    font-weight: bold;
+    display: block;
+    font-size: 22px;
+    color: gold;
     text-decoration: none;
+    margin-top: 10px;
 }
 
-/* SPACE FOR COUPLE */
-.hero-space {
-    height: 260px;
-}
-
-/* BUTTONS DOWN */
+/* ΚΟΥΜΠΙΑ ΚΑΤΩ */
 .hero-buttons {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 15px;
+    width: 90%;
+    z-index: 2;
 }
 
 .btn {
-    padding: 15px 25px;
-    border-radius: 15px;
-    font-weight: bold;
-    width: 260px;
+    padding: 15px;
     text-align: center;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .btn-call {
-    background: #d4af37;
+    background: gold;
     color: black;
 }
 
@@ -83,109 +88,56 @@ h1 {
     color: white;
 }
 
-/* SECTIONS */
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #1b1b1b;
-    padding: 20px;
-    border-radius: 10px;
-}
-
 /* GALLERY */
 .gallery {
+    padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
 }
 
 .gallery img {
     width: 100%;
     height: 250px;
     object-fit: cover;
-}
-
-/* FOOTER */
-footer {
-    background: black;
-    padding: 20px;
-}
-
-@media(max-width:768px){
-    h1 { font-size: 28px; }
-    .hero-space { height: 220px; }
+    border-radius: 12px;
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-    <div class="hero-top">
-        <img src="logo.jpg" class="hero-logo">
+<div class="hero-content">
+    <img src="logo.jpg" class="hero-logo">
 
-        <h1>Patras Photobooth & Music Events</h1>
+    <h1>Patras Photobooth & Music Events</h1>
 
-        <a href="tel:6932618810" class="phone">📞 6932618810</a>
-    </div>
+    <a href="tel:6932618810" class="phone">📞 6932618810</a>
+</div>
 
-    <div class="hero-space"></div>
-
-    <div class="hero-buttons">
-        <a href="tel:6932618810" class="btn btn-call">Κάλεσε τώρα</a>
-
-        <a href="https://instagram.com/wedding_photobooth_events" 
-           target="_blank" 
-           class="btn btn-instagram">
-           Instagram
-        </a>
-    </div>
+<div class="hero-buttons">
+    <a href="tel:6932618810" class="btn btn-call">Κάλεσε τώρα</a>
+    <a href="https://instagram.com/wedding_photobooth_events" target="_blank" class="btn btn-instagram">Instagram</a>
+</div>
 
 </header>
 
-<section>
-<h2>Σχετικά με εμάς</h2>
-<p>
-Αναλαμβάνουμε γάμους και εκδηλώσεις με DJ, photobooth και επαγγελματικό εξοπλισμό.
-</p>
-</section>
-
-<section>
-<h2>Υπηρεσίες</h2>
-<div class="services">
-<div class="card">DJ & Μουσική</div>
-<div class="card">Photobooth</div>
-<div class="card">Φωτισμός</div>
-<div class="card">Wedding Effects</div>
-</div>
-</section>
-
-<section>
-<h2>Gallery</h2>
+<!-- GALLERY -->
 <div class="gallery">
-<img src="event1.jpg">
-<img src="event2.jpg">
-<img src="wedding1.jpg">
-<img src="wedding2.jpg">
-<img src="wedding3.jpg">
-<img src="wedding4.jpg">
-<img src="wedding7.jpg">
+    <img src="new1.jpg">
+    <img src="new2.jpg">
+    <img src="new3.jpg">
+    <img src="new4.jpg">
+    <img src="new5.jpg">
+    <img src="new6.jpg">
+    <img src="new7.jpg">
+    <img src="new8.jpg">
+    <img src="new9.jpg">
+    <img src="new10.jpg">
 </div>
-</section>
-
-<footer>
-© Patras Photobooth & Music Events
-</footer>
 
 </body>
 </html>
