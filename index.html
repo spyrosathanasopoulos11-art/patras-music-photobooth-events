@@ -6,57 +6,67 @@
 <title>Patras Photobooth & Music Events</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #000;
     color: white;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* HERO */
 header {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background: url('hero.jpg') center/cover no-repeat;
 }
 
 header::after {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    top: 0;
-    left: 0;
+    inset: 0;
+    background: rgba(0,0,0,0.50);
 }
 
 .hero-content {
     position: absolute;
-    top: 10%;
-    width: 100%;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
     text-align: center;
     z-index: 2;
 }
 
 .hero-logo {
-    width: 200px;
-    border-radius: 15px;
+    width: 190px;
+    max-width: 70%;
+    border-radius: 18px;
+    background: rgba(0,0,0,0.45);
+    padding: 10px;
 }
 
-h1 {
+.hero-content h1 {
     font-size: 28px;
-    margin: 20px 0;
+    margin: 18px 0 10px;
 }
 
 .phone {
     display: block;
-    font-size: 22px;
-    color: gold;
-    text-decoration: none;
-    margin-top: 10px;
+    font-size: 24px;
+    color: #d4af37;
+    font-weight: bold;
+    margin-top: 6px;
 }
 
-/* ΚΟΥΜΠΙΑ ΚΑΤΩ */
 .hero-buttons {
     position: absolute;
     bottom: 40px;
@@ -72,25 +82,89 @@ h1 {
 .btn {
     padding: 15px;
     text-align: center;
-    border-radius: 12px;
-    text-decoration: none;
+    border-radius: 14px;
     font-size: 18px;
     font-weight: bold;
 }
 
 .btn-call {
-    background: gold;
+    background: #d4af37;
     color: black;
 }
 
 .btn-instagram {
     border: 2px solid white;
     color: white;
+    background: rgba(255,255,255,0.05);
+}
+
+/* GENERAL SECTIONS */
+section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin: 0 0 15px;
+}
+
+.section-text {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #dddddd;
+    font-size: 18px;
+}
+
+/* ABOUT */
+.about {
+    background: #111;
+}
+
+/* SERVICES */
+.services-section {
+    background: #0c0c0c;
+}
+
+.services {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid #2a2a2a;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    color: #d4af37;
+    font-size: 22px;
+}
+
+.card p {
+    margin: 0;
+    color: #d8d8d8;
 }
 
 /* GALLERY */
+.gallery-section {
+    background: #141414;
+}
+
 .gallery {
-    padding: 20px;
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 12px;
@@ -101,43 +175,173 @@ h1 {
     height: 250px;
     object-fit: cover;
     border-radius: 12px;
+    display: block;
+}
+
+/* CONTACT CTA */
+.contact-section {
+    background:
+      linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url('new6.jpg') center/cover no-repeat;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin: 0 0 15px;
+    font-size: 34px;
+}
+
+.contact-section p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #f1f1f1;
+    font-size: 18px;
+}
+
+.contact-buttons {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-buttons .btn {
+    width: 100%;
+    max-width: 320px;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 22px 20px;
+    color: #cfcfcf;
+}
+
+@media (min-width: 769px) {
+    .hero-content h1 {
+        font-size: 54px;
+    }
+
+    .phone {
+        font-size: 30px;
+    }
+
+    .hero-buttons {
+        width: 320px;
+    }
+
+    .contact-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .contact-buttons .btn {
+        width: auto;
+        min-width: 260px;
+    }
 }
 </style>
-
 </head>
-
 <body>
 
 <header>
+    <div class="hero-content">
+        <img src="logo.jpg" alt="Logo" class="hero-logo">
+        <h1>Patras Photobooth & Music Events</h1>
+        <a href="tel:6932618810" class="phone">📞 6932618810</a>
+    </div>
 
-<div class="hero-content">
-    <img src="logo.jpg" class="hero-logo">
-
-    <h1>Patras Photobooth & Music Events</h1>
-
-    <a href="tel:6932618810" class="phone">📞 6932618810</a>
-</div>
-
-<div class="hero-buttons">
-    <a href="tel:6932618810" class="btn btn-call">Κάλεσε τώρα</a>
-    <a href="https://instagram.com/wedding_photobooth_events" target="_blank" class="btn btn-instagram">Instagram</a>
-</div>
-
+    <div class="hero-buttons">
+        <a href="tel:6932618810" class="btn btn-call">Κάλεσε τώρα</a>
+        <a href="https://instagram.com/wedding_photobooth_events" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">Instagram</a>
+    </div>
 </header>
 
-<!-- GALLERY -->
-<div class="gallery">
-    <img src="new1.jpg">
-    <img src="new2.jpg">
-    <img src="new3.jpg">
-    <img src="new4.jpg">
-    <img src="new5.jpg">
-    <img src="new6.jpg">
-    <img src="new7.jpg">
-    <img src="new8.jpg">
-    <img src="new9.jpg">
-    <img src="new10.jpg">
-</div>
+<section class="about">
+    <div class="container">
+        <h2 class="section-title">Σχετικά με εμάς</h2>
+        <p class="section-text">
+            Η Patras Photobooth & Music Events αναλαμβάνει γάμους, βαπτίσεις,
+            parties και εκδηλώσεις με επαγγελματισμό, εμπειρία και σύγχρονο εξοπλισμό.
+            Δημιουργούμε ξεχωριστή ατμόσφαιρα, εντυπωσιακές εικόνες και μοναδικές στιγμές
+            που μένουν αξέχαστες.
+        </p>
+    </div>
+</section>
+
+<section class="services-section">
+    <div class="container">
+        <h2 class="section-title">Υπηρεσίες</h2>
+        <p class="section-text">
+            Ολοκληρωμένες λύσεις για κάθε εκδήλωση, με έμφαση στην εικόνα, τη διασκέδαση και το αποτέλεσμα.
+        </p>
+
+        <div class="services">
+            <div class="card">
+                <h3>🎧 DJ & Μουσική</h3>
+                <p>Μουσική κάλυψη για γάμους και events με σωστό πρόγραμμα και δυνατή ατμόσφαιρα.</p>
+            </div>
+
+            <div class="card">
+                <h3>📸 Photobooth</h3>
+                <p>Διασκεδαστικές φωτογραφίες και μοναδικές αναμνήσεις για εσάς και τους καλεσμένους σας.</p>
+            </div>
+
+            <div class="card">
+                <h3>💡 Φωτισμός</h3>
+                <p>Επαγγελματικός φωτισμός που αναδεικνύει τον χώρο και απογειώνει την εκδήλωση.</p>
+            </div>
+
+            <div class="card">
+                <h3>🎇 Wedding Effects</h3>
+                <p>Εντυπωσιακά εφέ για είσοδο, πρώτο χορό, τούρτα και ιδιαίτερες στιγμές της βραδιάς.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-section">
+    <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-text">
+            Μερικές από τις στιγμές και τις εικόνες από τις εκδηλώσεις μας.
+        </p>
+
+        <div class="gallery">
+            <img src="new1.jpg" alt="Photo 1">
+            <img src="new2.jpg" alt="Photo 2">
+            <img src="new3.jpg" alt="Photo 3">
+            <img src="new4.jpg" alt="Photo 4">
+            <img src="new5.jpg" alt="Photo 5">
+            <img src="new6.jpg" alt="Photo 6">
+            <img src="new7.jpg" alt="Photo 7">
+            <img src="new8.jpg" alt="Photo 8">
+            <img src="new9.jpg" alt="Photo 9">
+            <img src="new10.jpg" alt="Photo 10">
+        </div>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <h2>Κλείσε τώρα την εκδήλωσή σου</h2>
+        <p>
+            Επικοινώνησε μαζί μας για να οργανώσουμε μαζί τη μουσική, το photobooth
+            και τα wedding effects της εκδήλωσής σου με επαγγελματικό αποτέλεσμα.
+        </p>
+
+        <div class="contact-buttons">
+            <a href="tel:6932618810" class="btn btn-call">📞 Τηλέφωνο Επικοινωνίας</a>
+            <a href="https://instagram.com/wedding_photobooth_events" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">📸 Instagram</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © Patras Photobooth & Music Events
+</footer>
 
 </body>
 </html>
