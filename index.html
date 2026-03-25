@@ -40,7 +40,7 @@ section {
     background: gold;
     color: black;
     padding: 15px 25px;
-    margin-top: 20px;
+    margin: 10px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
@@ -63,14 +63,16 @@ section {
 
 /* GALLERY */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
 }
 
 .gallery img {
-    width: 33.33%;
+    width: 100%;
     height: 250px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 /* FOOTER */
@@ -95,7 +97,8 @@ footer {
     Δημιουργούμε μοναδικές στιγμές και ξεσηκώνουμε τον κόσμο μέχρι το πρωί!
     </p>
 
-    <a href="tel:6932618810" class="btn">Κάλεσε τώρα</a>
+    <a href="tel:6932618810" class="btn">📞 Κάλεσε τώρα</a>
+    <a href="https://instagram.com/TO_INSTAGRAM_SOU" target="_blank" class="btn">📸 Instagram</a>
 </section>
 
 <section>
@@ -114,6 +117,11 @@ footer {
         <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486">
         <img src="https://images.unsplash.com/photo-1505238680356-667803448bb6">
         <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc">
+        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622">
+        <img src="https://images.unsplash.com/photo-1472653816316-3ad6f10a6592">
+        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3">
+        <img src="https://images.unsplash.com/photo-1504198458649-3128b932f49b">
     </div>
 </section>
 
